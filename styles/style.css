@@ -1,5 +1,283 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  
+
+  /* padding-left:10px ;
+ padding-right: 10px; */
+ background-attachment: fixed;
+  background-image:url(../images/cover-image-dark.png) ;
+ background-position: center;
+ background-size: cover;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+.main {
+ padding-left:10px ;
+ padding-right: 10px;
+ padding-top: 40px;
+  background-color: var(--bg-color);
+  
+
+}
+
+.header {
+ background-image:url(../images/cover-image-dark.png) ;
+ background-position: center;
+ background-size: cover;
+ 
+ display: grid;
+ padding: 10px;
+ 
+}
+.header__theme-menu-button {
+  background-color: transparent;
+  color: var(--accent-text);
+  border:1px solid var(--accent-text);
+  font-family: var(--main-font-family);
+  font-size: var(--main-text-size);
+  font-weight: var(--main-text-weight);
+}
+.header__theme-menu-button:hover {
+  border:1px solid rgba(255, 0, 112, 0.4);
+}
+.header__theme-menu-button:focus {
+  border:none;
+  border-bottom: 1px solid rgba(255, 0, 112, 1);
+}
+.header__theme-menu-list {
+  margin-top:75px;
+  margin-bottom: 66.5px;
+  display: grid;
+  grid-template-columns:1;
+  grid-template-rows: repeat(3, min-content);
+  justify-content: end;
+  gap: 11.5px ;
+  color:var(--accent-text);
+  font-size:var(--main-text-size);
+  font-weight:var(--main-text-weight);
+  font-family: var(--main-font-family);
+  line-height: 18px;
+}
+.cover_title {
+  color:var(--h1-color);
+  font-size:var(--h1-font-size);
+  font-weight:var(--font-weight-bold);
+  font-family: var(--main-font-family);
+  align-self: center;
+  text-shadow: 4px 4px var(--text-shadow);
+  line-height: 83%;
+  
+}
+.cover_description-text {
+ display: inline-block;
+ margin-top: 55px;
+ margin-bottom: 66px;
+ /* justify-content: start;
+ justify-items: start; */
+/* justify-self: start;
+align-self: start; */
+ font-size:var(--main-text-size);
+font-weight:var(--font-weight-bold);
+font-family: var(--main-font-family);
+line-height: 23.4px;
+background-color: var(--bg-accent-text);
+color:var(--color-bg-accent-text);
+}
+
+.section {
+ width: 100%;
+ display: grid;
+ gap:20px;
+ line-height: 23.4px;
+}
+.section:not(:last-of-type) {
+  
+  margin-bottom: 50px;
+
+}
+.section_description:not(:last-of-type) {
+  margin
+}
+.section_right_title {
+ 
+  
+}
+.section_content {
+  
+  
+  
+}
+
+.section_center_title {
+ 
+}
+/* .title-decor-sudheading {
+   grid-column-start:2 ;
+   grid-column-end: 4;
+} */
+ 
+.section_title {
+  font-size:var(--main-text-size);
+font-weight:var(--font-weight-bold);
+font-family: var(--main-font-family);
+color:var(--accent-text);
+
+
+}
+.title-decor {
+margin-bottom: 9px;
+font-size:var(--main-text-size);
+font-weight:var(--font-weight-bold);
+font-family: var(--main-font-family);
+color:var(--color-bg-accent-text);
+background-color:var(--bg-accent-text) ;
+}
+.section_description {
+  font-size:var(--main-text-size);
+font-weight:var(--main-text-weight);
+font-family: var(--main-font-family);
+color:var(--text-color);
+
+
+}
+.title-decor-sudheading {
+  margin-bottom: 20px;
+ }
+ .title-decor-normal {
+  font-weight:var(--main-text-weight);
+ }
+
+.section_image {
+ width: 100%;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap:10px;
+ line-height: 23.4px;
+}
+.title-decor-image {
+ margin-bottom: 0px; 
+}
+
+.section_image-picture {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.page {
+  width: 1024px;
+ 
+  
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+/* }
+.main {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+
+}
+.header {
+ background-image:url(../images/cover-image-dark.png) ;
+ background-size: cover;
+ min-height: 768px;
+ display: grid;
+ 
+}
+.header__theme-menu-list {
+  margin-top:20px;
+  display: grid;
+  grid-template-columns: repeat(3, min-content)  ;
+  justify-content: center;
+  align-content: center;
+  gap: 23px ;
+  color:var(--accent-text);
+  font-size:var(--main-text-size);
+  font-weight:var(--main-text-weight);
+  font-family: var(--main-font-family);
+}
+.cover_title {
+  color:var(--h1-color);
+  font-size:var(--h1-font-size);
+  font-weight:var(--font-weight-bold);
+  font-family: var(--main-font-family);
+  align-self: center;
+  text-shadow: 4px 4px var(--text-shadow);
+ 
+}
+.cover_description-text {
+ display: inline-block;
+ margin-left: 50%;
+ font-size:var(--main-text-size);
+font-weight:var(--font-weight-bold);
+font-family: var(--main-font-family);
+background-color: var(--bg-accent-text);
+color:var(--color-bg-accent-text);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr  1fr 1fr;
+  gap:20px;
+ 
+}
+.section:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+.section_right_title {
+  /* grid-row-start: 1;
+  grid-row-end: auto; */
+  /* max-width: calc((100vw-20px)/3); */
+  
+/* 
+.section_content {
+   grid-column-start: 2;
+   grid-column-end: 4;
+  
+  
+}
+
+.section_center_title {
+  grid-column: span 3;
+}
+/* .title-decor-sudheading {
+   grid-column-start:2 ;
+   grid-column-end: 4;
+} */
+/* .section_title {
+  font-size:var(--main-text-size);
+font-weight:var(--font-weight-bold);
+font-family: var(--main-font-family);
+color:var(--accent-text);
+
+}
+.title-decor {
+
+font-size:var(--main-text-size);
+font-weight:var(--font-weight-bold);
+font-family: var(--main-font-family);
+color:var(--color-bg-accent-text);
+background-color:var(--bg-accent-text) ;
+}
+.section_description {
+  font-size:var(--main-text-size);
+font-weight:var(--main-text-weight);
+font-family: var(--main-font-family);
+color:var(--text-color);
+
+
+}  */
