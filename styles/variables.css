@@ -13,11 +13,11 @@
   --text-color: rgba(241, 178, 206, 1);
   --bg-accent-text: rgba(255, 0, 112, 1);
   --color-bg-accent-text: rgba(0, 0, 40, 1);
-
-  --h1-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  --line-height: 23.4px;
+  --h1-font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   --h1-color: rgba(219, 0, 255, 1);
   --text-shadow: rgba(255, 0, 112, 1);
-  /* sdfghjkltrfh */
+  
 
   
 }
