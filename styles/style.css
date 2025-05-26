@@ -1,53 +1,51 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
-
 .header {
   font-family: var(--main-font-family);
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   padding: 10px;
   position: relative;
   min-height: 668px;
-  /* block-size: 100vw; */
+  margin-block-end: 40px;
+  height: 100vh;
 }
 .header::before {
- content: "";
- width: 25px;
- height: 25px;
- border-top:1px solid var(--accent-text);
- border-right: 1px solid var(--accent-text);
- position: absolute;
- top: 10px;
- right:10px ;
-
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-text);
+  border-right: 1px solid var(--accent-text);
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .header::after {
- content: "";
- border-bottom:1px solid var(--accent-text);
- border-left: 1px solid var(--accent-text);
- position: absolute;
- width: 25px;
- height: 25px;
- bottom: 10px;
- left: 10px;
+  content: "";
+  border-bottom: 1px solid var(--accent-text);
+  border-left: 1px solid var(--accent-text);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 10px;
 }
 .decorated-element {
   position: absolute;
   right: 38px;
-  top:10px;
+  top: 10px;
   font-family: var(--main-font-family);
   font-size: var(--main-text-size);
   font-weight: var(--main-text-weight);
-  color:var(--accent-text);
+  color: var(--accent-text);
   line-height: 25px;
   text-transform: uppercase;
 }
@@ -57,19 +55,17 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color:var(--accent-text) ;
+  background-color: var(--accent-text);
   box-shadow: 0px 0px 4px 2px var(--accent-text);
   position: absolute;
   right: -18px;
-  top:10px;
-  
-
+  top: 10px;
 }
 .header__theme-menu-list {
   justify-items: end;
-  display: grid;
-  grid-template-rows: repeat(3, min-content);
-  gap: 13px;
+}
+.header__theme-menu-button_active {
+  pointer-events: none
 }
 .header__theme-menu-button {
   background-color: transparent;
@@ -81,13 +77,13 @@
   font-weight: var(--main-text-weight);
   line-height: 18px;
   text-transform: lowercase;
-  padding:2px 13px ;
-  
+  padding: 2px 13px;
+  margin-block-end: 14px;
 }
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-text);
 }
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   border: none;
   outline: none;
   border-bottom: 1px solid rgba(255, 0, 112, 1);
@@ -98,7 +94,7 @@
 
 .cover_title {
   color: var(--h1-color);
-  font-size: var(--h1-font-size);
+  font-size: var(--h1-font-size-mobil);
   font-weight: var(--font-weight-bold);
   font-family: var(--main-font-family);
   text-shadow: 4px 4px var(--text-shadow);
@@ -112,14 +108,12 @@
   line-height: var(--line-height);
   background-color: var(--bg-accent-text);
   color: var(--color-bg-accent-text);
-  margin-top: -10px;
 }
 .main {
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 40px;
   background-color: var(--bg-color);
-  margin-bottom: 40px;
+  margin-block-end: 40px;
 }
 .section {
   width: 100%;
@@ -128,7 +122,7 @@
   line-height: var(--line-height);
 }
 .section:not(:last-of-type) {
-  margin-bottom: 50px;
+  margin-block-end: 50px;
 }
 
 .section_title {
@@ -138,7 +132,7 @@
   color: var(--accent-text);
 }
 .title-decor {
-  margin-bottom: 10px;
+  margin-block-end: 10px;
   font-size: var(--main-text-size);
   font-weight: var(--font-weight-bold);
   font-family: var(--main-font-family);
@@ -151,7 +145,7 @@
   font-weight: var(--main-text-weight);
   font-family: var(--main-font-family);
   color: var(--text-color);
-  line-height:var(--line-height);
+  line-height: var(--line-height);
 }
 .section_description_link {
   text-shadow: 2px 2px var(--text-shadow);
@@ -164,7 +158,7 @@
 }
 
 .title-decor-sudheading {
-  margin-bottom: 0px;
+  margin-block-end: 0px;
 }
 .title-decor-normal {
   font-weight: var(--main-text-weight);
@@ -172,13 +166,11 @@
 
 .section_image {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 10px;
   line-height: var(--line-height);
 }
 .title-decor-image {
-  margin-bottom: 0px;
+  margin-block-end: 0px;
 }
 
 .section_image-picture {
@@ -194,27 +186,27 @@
   align-items: center;
   justify-items: center;
   position: relative;
+  height: 100vh;
 }
 .footer::before {
- content: "";
- width: 25px;
- height: 25px;
- border-top:1px solid var(--accent-text);
- border-right: 1px solid var(--accent-text);
- position: absolute;
- top: 10px;
- right:10px ;
-
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-text);
+  border-right: 1px solid var(--accent-text);
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .footer::after {
- content: "";
- border-bottom:1px solid var(--accent-text);
- border-left: 1px solid var(--accent-text);
- position: absolute;
- width: 25px;
- height: 25px;
- bottom: 10px;
- left: 10px;
+  content: "";
+  border-bottom: 1px solid var(--accent-text);
+  border-left: 1px solid var(--accent-text);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 10px;
 }
 
 .footer_title {
@@ -223,236 +215,240 @@
   text-shadow: 2px 2px var(--text-shadow);
 }
 
-@media (900px < width ) {
+@media (1024px> width >= 768px) {
+  .header {
+    padding: 20px;
+    min-height: 1024px;
+    align-items: center;
+    margin-block-end: 60px;
+  }
+  .header::before {
+    top: 20px;
+    right: 20px;
+  }
+  .header::after {
+    bottom: 20px;
+    left: 20px;
+  }
+  .decorated-element {
+    right: 48px;
+    top: 20px;
+  }
 
+  .decorated-element::after {
+    right: -19px;
+    top: 10px;
+  }
+  .header__theme-menu-button {
+    margin-block-end: 14px;
+  }
+  .cover_title {
+    font-size: var(--h1-font-size-desktop);
+    margin-left: -20px;
+  }
+  .cover_description-text {
+    margin-left: 50%;
+  }
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-block-end: 60px;
+  }
+  .section {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .section:not(:last-of-type) {
+    margin-block-end: 80px;
+  }
 
-.header {
- padding: 20px;
- min-height: 768px;
- align-items: start;
- 
-}
-.header::before {
- top: 20px;
- right:20px ;
+  .section_content {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+ .section_right {
+  grid-template-columns: 1fr 2fr;
+ }
+  .section_content_center {
+    grid-column: span 3;
+  }
 
-}
-.header::after {
- bottom: 20px;
- left: 20px;
-}
-.decorated-element {
-  right: 48px;
-  top:20px;
-  
-}
+  .title-decor-sudheading {
+    grid-column: span 2;
+  }
+  .section_right_title-concentration {
+    grid-row: 1 / span 6;
+  }
+  .section_image {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "title title title"
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+    margin-block-end: 60px;
+  }
+  .title-decor-image {
+    grid-area: title;
+  }
+  .section_image-picture {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .section_image-sunset {
+    grid-area: sunset;
+  }
 
-.decorated-element::after {
+  .section_image-ice-cream {
+    grid-area: ice-cream;
+  }
+  .section_image-tape {
+    grid-area: tape;
+  }
 
-  right: -29px;
-  top:20px;
-  
+  .section_image-books {
+    grid-area: books;
+  }
 
+  .section_image-street {
+    grid-area: street;
+  }
+  .footer {
+    padding: 20px;
+    min-height: 1024px;
+  }
+  .footer::before {
+    top: 20px;
+    right: 20px;
+  }
+  .footer::after {
+    bottom: 20px;
+    left: 20px;
+  }
+  .footer_title {
+    margin-left: 0px;
+  }
 }
-.header__theme-menu-list {
- 
-  
-  display: grid;
-  grid-template-columns: repeat(3, min-content) ;
-  justify-content: center;
-  align-content: center;
-  gap: 10px ;
+@media (width >= 1024px) {
+  .header {
+    padding: 20px;
+    min-height: 768px;
+    align-items: start;
+    margin-block-end: 60px;
+  }
+  .header::before {
+    top: 20px;
+    right: 20px;
+  }
+  .header::after {
+    bottom: 20px;
+    left: 20px;
+  }
+  .decorated-element {
+    right: 48px;
+    top: 20px;
+  }
 
-}
+  .decorated-element::after {
+    right: -19px;
+    top: 10px;
+  }
+  .header__theme-menu-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+  }
 
-.cover_title {
+  .cover_title {
+    font-size: var(--h1-font-size-desktop);
+    align-self: center;
+    margin-left: -20px;
+  }
+  .cover_description-text {
+    margin-left: 50%;
+    align-self: center;
+  }
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-block-end: 60px;
+  }
+  .section {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .section:not(:last-of-type) {
+    margin-block-end: 80px;
+  }
 
-  align-self: center;
-  margin-left: -20px;;
- 
-}
-.cover_description-text {
- margin-left: 50%;
- align-self: center;
- margin-top: -60px;
+  .section_content {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
 
-}
-.main {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 60px;
-  margin-bottom: 60px;
-}
-.section {
-  grid-template-columns: 1fr  1fr 1fr;
-  gap:20px;
- 
-}
-.section:not(:last-of-type) {
-  margin-bottom: 80px;
-}
+  .section_center_title {
+    grid-column: span 3;
+  }
+  .title-decor-sudheading {
+    grid-column: span 2;
+  }
+  .section_right_title-concentration {
+    grid-row: 1 / span 6;
+  }
+  .section_image {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "title title title"
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+    margin-block-end: 60px;
+  }
+  .title-decor-image {
+    grid-area: title;
+  }
+  .section_image-picture {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .section_image-sunset {
+    grid-area: sunset;
+  }
 
-.section_content {
-   grid-column-start: 2;
-   grid-column-end: 4;
-  
-  
-}
+  .section_image-ice-cream {
+    grid-area: ice-cream;
+  }
+  .section_image-tape {
+    grid-area: tape;
+  }
 
-.section_center_title {
-  grid-column: span 3;
-  
-}
-.title-decor-sudheading {
-  grid-column: span 2;
-  
-  
-}
-.section_right_title-right {
-  grid-row: 1/ span 7;
- 
-}
-.section_image {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  .section_image-books {
+    grid-area: books;
+  }
 
-  grid-template-areas: 
-  "title title title"
-  "sunset sunset ice-cream"
-  "tape books ice-cream"
-  "tape street street" ;
-
+  .section_image-street {
+    grid-area: street;
+  }
+  .footer {
+    padding: 20px;
+    min-height: 768px;
+  }
+  .footer::before {
+    top: 20px;
+    right: 20px;
+  }
+  .footer::after {
+    bottom: 20px;
+    left: 20px;
+  }
+  .footer_title {
+    margin-left: 0px;
+  }
 }
-.title-decor-image {
-  grid-area: title;
-}
-.section_image-picture {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.section_image-sunset {
- grid-area: sunset;
-}
-
-.section_image-ice-cream {
-grid-area:ice-cream ;
-}
-.section_image-tape {
-grid-area: tape;
-}
-
-.section_image-books {
-grid-area:books ;
-}
-
-.section_image-street {
-grid-area: street;
-
-}
-}
-
-
-/* 
-.page {
-  width: 1024px;
- 
-  
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-/* }
-.main {
-  padding: 60px 20px;
-  background-color: var(--bg-color);
-
-}
-.header {
- background-image:url(../images/cover-image-dark.png) ;
- background-size: cover;
- min-height: 768px;
- display: grid;
- 
-}
-.header__theme-menu-list {
-  margin-top:20px;
-  display: grid;
-  grid-template-columns: repeat(3, min-content)  ;
-  justify-content: center;
-  align-content: center;
-  gap: 23px ;
-  color:var(--accent-text);
-  font-size:var(--main-text-size);
-  font-weight:var(--main-text-weight);
-  font-family: var(--main-font-family);
-}
-.cover_title {
-  color:var(--h1-color);
-  font-size:var(--h1-font-size);
-  font-weight:var(--font-weight-bold);
-  font-family: var(--main-font-family);
-  align-self: center;
-  text-shadow: 4px 4px var(--text-shadow);
- 
-}
-.cover_description-text {
- display: inline-block;
- margin-left: 50%;
- font-size:var(--main-text-size);
-font-weight:var(--font-weight-bold);
-font-family: var(--main-font-family);
-background-color: var(--bg-accent-text);
-color:var(--color-bg-accent-text);
-}
-
-.section {
-  display: grid;
-  grid-template-columns: 1fr  1fr 1fr;
-  gap:20px;
- 
-}
-.section:not(:last-of-type) {
-  margin-bottom: 80px;
-}
-.section_right_title {
-  /* grid-row-start: 1;
-  grid-row-end: auto; */
-/* max-width: calc((100vw-20px)/3); */
-
-/* 
-.section_content {
-   grid-column-start: 2;
-   grid-column-end: 4;
-  
-  
-}
-
-.section_center_title {
-  grid-column: span 3;
-}
-/* .title-decor-sudheading {
-   grid-column-start:2 ;
-   grid-column-end: 4;
-} */
-/* .section_title {
-  font-size:var(--main-text-size);
-font-weight:var(--font-weight-bold);
-font-family: var(--main-font-family);
-color:var(--accent-text);
-
-}
-.title-decor {
-
-font-size:var(--main-text-size);
-font-weight:var(--font-weight-bold);
-font-family: var(--main-font-family);
-color:var(--color-bg-accent-text);
-background-color:var(--bg-accent-text) ;
-}
-.section_description {
-  font-size:var(--main-text-size);
-font-weight:var(--main-text-weight);
-font-family: var(--main-font-family);
-color:var(--text-color);
-
-
-}  */
