@@ -11,16 +11,18 @@
   --bg-accent-text: rgba(255, 141, 203, 1);
   --color-bg-accent-text: rgba(53, 52, 48, 1);
   --h1-color: rgba(255, 194, 230, 1);
-  --text-shadow: 4px 4px 0px 0px rgba(255, 141, 203, 1);
+  --text-shadow: 4px 4px 0px 0px  rgba(255, 141, 203, 1);
+  --bg-cover:url(../images/cover-image-light.png);
 }
 
-.theme-light .page {
+/* .theme-light .page {
   background-image: url(../images/cover-image-light.png);
   
-}
+} */
 .theme-light .decorated-element {
   display: none;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -31,6 +33,7 @@
   --color-bg-accent-text: rgba(53, 52, 48, 1);
   --h1-color: rgba(255, 194, 230, 1);
   --text-shadow: 4px 4px 0px 0px rgba(255, 141, 203, 1);
+  --bg-cover:url(../images/cover-image-light.png);
   }
 }
 

@@ -12,9 +12,10 @@
   --color-bg-accent-text: rgba(0, 0, 40, 1);
   --h1-color: rgba(219, 0, 255, 1);
   --text-shadow: rgba(255, 0, 112, 1);
+  --bg-cover:url(../images/cover-image-dark.png);
 }
 
-.theme-dark .page {
+/* .theme-dark .page {
   background-image: url(../images/cover-image-dark.png);
 
-}
+} */

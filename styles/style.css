@@ -1,13 +1,15 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: url(../images/cover-image-dark.png);
+  background-color: var(--bg-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+
 }
 
 .header {
+  background-image: var(--bg-cover);
   font-family: var(--main-font-family);
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -62,9 +64,8 @@
 }
 .header__theme-menu-list {
   justify-items: end;
-}
-.header__theme-menu-button_active {
-  pointer-events: none;
+  align-self: center;
+ 
 }
 .header__theme-menu-button {
   background-color: transparent;
@@ -81,6 +82,7 @@
 }
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-text);
+  pointer-events: none;
 }
 .header__theme-menu-button:focus-visible {
   border: none;
@@ -187,6 +189,8 @@
   align-items: center;
   justify-items: center;
   position: relative;
+  
+  
 }
 .footer::before {
   content: "";

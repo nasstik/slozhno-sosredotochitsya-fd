@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  
+  --bg-cover:url(../images/cover-image-dark.png);
   --main-font-family: 'IBM Plex mono',sans-serif;
   --main-text-size: 18px;
   --main-text-weight:400;
