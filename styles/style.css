@@ -5,7 +5,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
 }
 
 .header {
@@ -65,7 +64,6 @@
 .header__theme-menu-list {
   justify-items: end;
   align-self: center;
- 
 }
 .header__theme-menu-button {
   background-color: transparent;
@@ -189,8 +187,6 @@
   align-items: center;
   justify-items: center;
   position: relative;
-  
-  
 }
 .footer::before {
   content: "";
