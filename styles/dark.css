@@ -10,8 +10,11 @@
   --text-color: rgba(241, 178, 206, 1);
   --bg-accent-text: rgba(255, 0, 112, 1);
   --color-bg-accent-text: rgba(0, 0, 40, 1);
-  --h1-color: rgba(219, 0, 255, 1);
+  --title-color: rgba(219, 0, 255, 1);
   --text-shadow: rgba(255, 0, 112, 1);
-  --bg-cover:url(../images/cover-image-dark.png);
+  --bg-cover: url(../images/cover-image-dark.png);
+  --botton-hover: rgba(255, 0, 112, 0.4);
+  --button-focus: rgba(255, 0, 112, 1);
+  --link-border: rgba(241, 178, 206, 1);
+  --decorated-element-visible: block;
 }
-

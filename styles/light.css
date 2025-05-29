@@ -5,30 +5,32 @@
 */
 
 :root.theme-light {
- --accent-text:  rgba(53, 52, 48, 1);
-  --bg-color:rgba(255, 241, 247, 1);
+  --accent-text: rgba(53, 52, 48, 1);
+  --bg-color: rgba(255, 241, 247, 1);
   --text-color: rgba(53, 52, 48, 1);
   --bg-accent-text: rgba(255, 141, 203, 1);
   --color-bg-accent-text: rgba(53, 52, 48, 1);
-  --h1-color: rgba(255, 194, 230, 1);
-  --text-shadow:  rgba(255, 141, 203, 1);
-  --bg-cover:url(../images/cover-image-light.png);
+  --title-color: rgba(255, 194, 230, 1);
+  --text-shadow: rgba(255, 141, 203, 1);
+  --bg-cover: url(../images/cover-image-light.png);
+  --botton-hover: rgba(50, 49, 45, 0.4);
+  --button-focus: rgba(53, 52, 48, 1);
+  --link-border: rgba(53, 52, 48, 1);
+  --decorated-element-visible: none;
 }
-
-.theme-light .decorated-element {
-  display: none;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
-  --accent-text:  rgba(53, 52, 48, 1);
-  --bg-color:rgba(255, 241, 247, 1);
-  --text-color: rgba(53, 52, 48, 1);
-  --bg-accent-text: rgba(255, 141, 203, 1);
-  --color-bg-accent-text: rgba(53, 52, 48, 1);
-  --h1-color: rgba(255, 194, 230, 1);
-  --text-shadow: rgba(255, 141, 203, 1);
-  --bg-cover:url(../images/cover-image-light.png);
+    --accent-text: rgba(53, 52, 48, 1);
+    --bg-color: rgba(255, 241, 247, 1);
+    --text-color: rgba(53, 52, 48, 1);
+    --bg-accent-text: rgba(255, 141, 203, 1);
+    --color-bg-accent-text: rgba(53, 52, 48, 1);
+    --title-color: rgba(255, 194, 230, 1);
+    --text-shadow: rgba(255, 141, 203, 1);
+    --bg-cover: url(../images/cover-image-light.png);
+    --botton-hover: rgba(50, 49, 45, 0.4);
+    --button-focus: rgba(53, 52, 48, 1);
+    --link-border: rgba(53, 52, 48, 1);
+    --decorated-element-visible: none;
   }
 }
-
